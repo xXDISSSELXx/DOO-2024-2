@@ -32,4 +32,5 @@ public class TextHelper {
 		return getDefault(string).trim();
 	}
 	
+	
 }
