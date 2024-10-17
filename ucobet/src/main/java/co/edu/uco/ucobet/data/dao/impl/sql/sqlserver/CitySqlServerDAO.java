@@ -105,11 +105,7 @@ public final class CitySqlServerDAO extends SqlDAO implements CityDAO {
 		}
 	}
 
-	@Override
-	public void uptade(UUID data) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 		
 
