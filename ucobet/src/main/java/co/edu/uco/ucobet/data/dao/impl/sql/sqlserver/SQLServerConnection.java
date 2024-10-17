@@ -6,10 +6,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 public class SQLServerConnection {
 	
-	public static void main(String[] args) {
-		String url = "jdbc:postgresql://localhost:5432/ucoBet";
-		String usuario = "postgres";
-        String contraseña = "12345";
+		private static final String url = "jdbc:postgresql://localhost:5432/ucoBet";
+		private static final String usuario = "postgres";
+		private static final String contraseña = "12345";
         
         
         
@@ -20,6 +19,7 @@ public class SQLServerConnection {
                 "edad INTEGER," +
                 "salario DECIMAL(10, 2)" +
                 ");";
+        {
         
         try (Connection conexion = DriverManager.getConnection(url, usuario, contraseña);
              Statement statement = conexion.createStatement()) {
@@ -32,10 +32,6 @@ public class SQLServerConnection {
                System.out.println("Error al crear la tabla: " + e.getMessage());
                e.printStackTrace();
            }
-        
-        
-        
-      
 	}
 }
 
