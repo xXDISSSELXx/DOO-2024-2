@@ -6,22 +6,22 @@ import co.edu.uco.crosscutting.helpers.TextHelper;
 import co.edu.uco.crosscutting.helpers.UUIDHelper;
 
 public class CountryDomain extends Domain {
-	
+
 	private String name;
-	
-	private CountryDomain(final UUID id, final String name){
+
+	private CountryDomain(final UUID id, final String name) {
 		super(id);
-		setName(name);	
+		setName(name);
 	}
-	
-	public static final CountryDomain create (final UUID id, final String name){
-		return new CountryDomain(id, name);	
+
+	public static final CountryDomain create(final UUID id, final String name) {
+		return new CountryDomain(id, name);
 	}
-	
-	static final CountryDomain create (){
-		return new CountryDomain(UUIDHelper.getDefault(), TextHelper.EMPTY );	
+
+	static final CountryDomain create() {
+		return new CountryDomain(UUIDHelper.getDefault(), TextHelper.EMPTY);
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -29,10 +29,9 @@ public class CountryDomain extends Domain {
 	private void setName(final String name) {
 		this.name = TextHelper.applyTrim(name);
 	}
-	
+
 	@Override
 	public UUID getId() {
 		return super.getId();
 	}
-
 }
